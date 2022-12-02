@@ -1,8 +1,9 @@
 .App{
   width: 70%;
   height: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(30, 122, 202);
   margin: 0 auto;
+  border-radius: 10px;
 }
 
 .pop-movies{
@@ -10,6 +11,11 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-column-gap: 1rem;
   grid-row-gap: 2rem;
+  background-color: #87D68D;
+  height: 300%;
+  border-radius: 10px;
+  padding: 2%;
+  margin-top: 20px;
 }
 
 img{
@@ -18,12 +24,6 @@ img{
   object-fit: cover;
   border-radius: 1rem;
   margin-bottom: 1rem;
-}
-
-h2{
-  text-align: center;
-  font-size: 1rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -40,11 +40,11 @@ h2{
   min-width: 5rem;
   padding: 0.5rem 1rem;
   border: none;
-  background-color: #fff;
+  background-color: #F7FFF6;
   color: rgb(27, 211, 227);
   border-radius: 1rem;
-  border: 2px solid rgb(142, 12, 147);
-  background-color: rgb(217, 18, 223);
+ 
+  background-color: #87D68D;
   font-weight: bold;
   cursor: pointer;
 
@@ -54,11 +54,11 @@ h2{
 button{
   margin: 5px;
   align-items: center;
-  background-color: rgb(217, 18, 223);
+  background-color: #87D68D;
   border: 0;
   border-radius: 100px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #F7FFF6;
   cursor: pointer;
   display: inline-flex;
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -82,24 +82,56 @@ button{
 }
 
 button.active{
-  background-color: rgb(23, 237, 76);
-  color: rgb(255, 255, 255);
+  background-color: rgb(30, 122, 202);
+  color: #F7FFF6;
 }
 
 .header{
   margin: 0 auto;
-  width: 70%;
+  width: 60%;
   height: 100px;
-  background-color: rgb(25, 48, 221);
+  background-color: #87D68D;
+  border-radius: 10px;
 }
 
 .header-h1{
   text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: #fff;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #F7FFF6;
+  padding-top: 30px;
+  font-weight: bold;
 }
 
 
+.movie-title{
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #fdf6ff;
+  background-color: rgb(30, 122, 202);
+ 
+  border-radius: 10px;
+  height: 30px;
+}
+
+.movie-release-date{
+  margin-top: -10px;
+  text-align: center;
+  color: black;
+  font-size: 10px;
+  color: #fdf6ff;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.card{
+  border: 2px solid rgb(30, 122, 202);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(30, 122, 202);
+}
 
 
-
+.page-button-div{
+  text-align: center;
+}
