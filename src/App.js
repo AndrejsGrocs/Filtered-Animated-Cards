@@ -14,16 +14,31 @@ function App() {
   const [popular, setPopular] = useState([])
   const [filtered, setFiltered] = useState([])
   const [activeGenre, setActiveGenre] = useState(0)
-  const [count, setCount] = useState(1)
- 
+  const [page, setPage] = useState(1)
 
+
+
+
+  const nextPage = () => {
+    
+    setPage(page + 1)
+    console.log('Function is working', page)
+  };
+
+  const previousPage = () => {
+   
+    setPage(page - 1)
+    console.log('Function is working', page)
+  };
 
   useEffect(()=>{
     fetchPopular()
   },[])
 
+
+
   const fetchPopular = async () => {
-    const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${count}`)
+    const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${page}`)
     const movies = await data.json()
     setPopular(movies.results)
     setFiltered(movies.results)
@@ -33,27 +48,24 @@ function App() {
 
   }
 
-  const next = (e) => {
-    setCount(count + 1);
-    console.log('Function is working', count)
-  };
 
-  const previous = () => {
-    setCount(count - 1);
-    console.log('Function is working', count)
-  };
- 
   return (
     <>
     <Header/>
     <div className="App">
 
     <Filter popular={popular} setFiltered={setFiltered} activeGenre={activeGenre} setActiveGenre={setActiveGenre}/>
-    <div className='page-button-div'>
-    <button onClick={previous}>Previous</button>
-    <h2 className='movie-title'>Page: {count}</h2>
-    <button onClick={next}>Next</button>
-        </div>
+
+
+
+ 
+    {/* <div className='page-button-div'>
+    <button onClick={()=>previousPage()}>Previous</button>
+    <h2 className='movie-title'>Page: {page}</h2>
+    <button onClick={()=>nextPage()}>Next</button>
+        </div> */}
+
+
         <motion.div 
    
         layout className='pop-movies'>
